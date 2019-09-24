@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Betfair.ESASwagger.Standard
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetfairNG.Standard", "BetfairNG.Standard\BetfairNG.Standard.csproj", "{05CFDA43-8051-47D3-AA0D-E0B16A42BA7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExample.Core", "ConsoleExample.Core\ConsoleExample.Core.csproj", "{556A692A-8220-480A-8555-11B6ED90CB3C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DED225A1-CB1F-4E24-B2DB-0F3611F0D88B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,15 +53,16 @@ Global
 		{05CFDA43-8051-47D3-AA0D-E0B16A42BA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05CFDA43-8051-47D3-AA0D-E0B16A42BA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05CFDA43-8051-47D3-AA0D-E0B16A42BA7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{556A692A-8220-480A-8555-11B6ED90CB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{556A692A-8220-480A-8555-11B6ED90CB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{556A692A-8220-480A-8555-11B6ED90CB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{556A692A-8220-480A-8555-11B6ED90CB3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FAF8F468-9AAE-4A98-B466-EDC1B9B990F2}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA6E943E-8F24-4D6D-BBD6-FDEF92C94D6E} = {DED225A1-CB1F-4E24-B2DB-0F3611F0D88B}
+		{127E115F-F2B1-4499-BCA1-06BBD52DD94D} = {DED225A1-CB1F-4E24-B2DB-0F3611F0D88B}
+		{05CFDA43-8051-47D3-AA0D-E0B16A42BA7B} = {DED225A1-CB1F-4E24-B2DB-0F3611F0D88B}
 	EndGlobalSection
 EndGlobal
