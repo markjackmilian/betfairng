@@ -14,7 +14,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  project: BetfairNG.Standard/BetfairNG.Standard.csproj"
+  project: "BetfairNG.Standard\\BetfairNG.Standard.csproj"
   publishFolder: "BetfairNG.Standard/bin/$(buildConfiguration)/netstandard2.0"
   PackNumber: $(Build.BuildNumber)
   
