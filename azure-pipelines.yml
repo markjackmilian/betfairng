@@ -38,12 +38,6 @@ steps:
     arguments: "-c $(buildConfiguration)"
 
 
-- task: DotNetCoreCLI@2
-  displayName: "Build"
-  inputs:
-    command: "build"
-    projects: "$(projectTest)"
-    arguments: "-c $(buildConfiguration)"
 
 - task: NuGetCommand@2
   inputs:
