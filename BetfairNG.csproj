@@ -165,13 +165,13 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Betfair.ESAClient.csproj">
-      <Project>{c6f11e1b-da85-41bc-9dee-b941d3c6a805}</Project>
-      <Name>Betfair.ESAClient</Name>
+    <ProjectReference Include="Betfair.ESAClient.Standard\Betfair.ESAClient.Standard.csproj">
+      <Project>{fa6e943e-8f24-4d6d-bbd6-fdef92c94d6e}</Project>
+      <Name>Betfair.ESAClient.Standard</Name>
     </ProjectReference>
-    <ProjectReference Include="Betfair.ESASwagger.csproj">
-      <Project>{05419e45-cad4-4fb6-bc46-b93119d9f22d}</Project>
-      <Name>Betfair.ESASwagger</Name>
+    <ProjectReference Include="Betfair.ESASwagger.Standard\Betfair.ESASwagger.Standard.csproj">
+      <Project>{127e115f-f2b1-4499-bca1-06bbd52dd94d}</Project>
+      <Name>Betfair.ESASwagger.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -247,3 +247,5 @@ ModelManifest.xml
 /ConsoleExample/App.config
 /ConsoleExample/SecureStringManager.cs
 .nuget
+
+.idea
