@@ -14,7 +14,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  project: "betfairng/BetfairNG.Standard/BetfairNG.Standard.csproj"
+  project: "BetfairNG.Standard\\BetfairNG.Standard.csproj"
   publishFolder: "BetfairNG.Standard/bin/$(buildConfiguration)/netstandard2.0"
   PackNumber: $(Build.BuildNumber)
   
@@ -38,17 +38,6 @@ steps:
     arguments: "-c $(buildConfiguration)"
 
 
-- task: DotNetCoreCLI@2
-  displayName: "Build"
-  inputs:
-    command: "build"
-    projects: "$(projectTest)"
-    arguments: "-c $(buildConfiguration)"
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: '$(projectTest)'
 
 - task: NuGetCommand@2
   inputs:

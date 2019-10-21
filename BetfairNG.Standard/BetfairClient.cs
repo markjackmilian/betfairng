@@ -79,6 +79,7 @@ namespace BetfairNG
             string marketId, 
             IList<PlaceInstruction> placeInstructions,
             string customerRef = null,
+            string customerStrategyRef = null,
             MarketVersion marketVersion = null);
 
         Task<BetfairServerResponse<CancelExecutionReport>> CancelOrders(
@@ -178,6 +179,7 @@ namespace BetfairNG
         private static readonly string MARKET_ID = "marketId";
         private static readonly string INSTRUCTIONS = "instructions";
         private static readonly string CUSTOMER_REFERENCE = "customerRef";
+        private static readonly string CUSTOMER_STRATEGY_REFERENCE = "customerStrategyRef";
         private static readonly string INCLUDE_SETTLED_BETS = "includeSettledBets";
         private static readonly string INCLUDE_BSP_BETS = "includeBspBets";
         private static readonly string INCLUDE_ITEM_DESCRIPTION = "includeItemDescription";
@@ -420,6 +422,7 @@ namespace BetfairNG
             string marketId, 
             IList<PlaceInstruction> placeInstructions,
             string customerRef = null,
+            string customerStrategyRef = null,
             MarketVersion marketVersion = null)
         {
             var args = new Dictionary<string, object>();
@@ -427,8 +430,9 @@ namespace BetfairNG
             args[MARKET_ID] = marketId;
             args[INSTRUCTIONS] = placeInstructions;
             args[CUSTOMER_REFERENCE] = customerRef;
+            args[CUSTOMER_STRATEGY_REFERENCE] = CUSTOMER_STRATEGY_REFERENCE;
             args[MARKET_VERSION] = marketVersion;
-
+            
             return networkClient.Invoke<PlaceExecutionReport>(Endpoint.Betting, PLACE_ORDERS_METHOD, args);
         }
 

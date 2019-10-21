@@ -67,5 +67,11 @@ namespace BetfairNG.Data
 
         [JsonProperty(PropertyName = "regulatorCode")]
         public string RegulatorCode { get; set; }
+        
+        [JsonProperty(PropertyName = "customerOrderRef")]
+        public string CustomerOrderRef { get; set; }
+        
+        [JsonProperty(PropertyName = "customerStrategyRef")]
+        public string CustomerStrategyRef { get; set; }
     }
 }
