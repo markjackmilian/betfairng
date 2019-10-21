@@ -174,9 +174,10 @@ namespace BetfairNG
             string marketId, 
             IList<PlaceInstruction> placeInstructions,
             string customerRef = null,
+            string customerStrategyRef = null,
             MarketVersion marketVersion = null)
         {
-            return client.PlaceOrders(marketId, placeInstructions, customerRef, marketVersion).Result;
+            return client.PlaceOrders(marketId, placeInstructions, customerRef,customerStrategyRef ,marketVersion).Result;
         }
 
         public BetfairServerResponse<CancelExecutionReport> CancelOrders(
