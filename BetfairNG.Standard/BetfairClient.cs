@@ -430,7 +430,7 @@ namespace BetfairNG
             args[MARKET_ID] = marketId;
             args[INSTRUCTIONS] = placeInstructions;
             args[CUSTOMER_REFERENCE] = customerRef;
-            args[CUSTOMER_STRATEGY_REFERENCE] = CUSTOMER_STRATEGY_REFERENCE;
+            args[CUSTOMER_STRATEGY_REFERENCE] = customerStrategyRef;
             args[MARKET_VERSION] = marketVersion;
             
             return networkClient.Invoke<PlaceExecutionReport>(Endpoint.Betting, PLACE_ORDERS_METHOD, args);
