@@ -12,7 +12,7 @@ namespace BetfairNG.Data
         public InstructionReportStatus Status { get; set; }
 
         [JsonProperty(PropertyName = "errorCode")]
-        public InstructionReportErrorCode ErrorCode { get; set; }
+        public InstructionReportErrorCode? ErrorCode { get; set; }
 
         [JsonProperty(PropertyName = "instruction")]
         public PlaceInstruction Instruction { get; set; }

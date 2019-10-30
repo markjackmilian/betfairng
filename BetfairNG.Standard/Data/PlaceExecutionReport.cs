@@ -12,7 +12,7 @@ namespace BetfairNG.Data
         public ExecutionReportStatus Status { get; set; }
 
         [JsonProperty(PropertyName = "errorCode")]
-        public ExecutionReportErrorCode ErrorCode { get; set; }
+        public ExecutionReportErrorCode? ErrorCode { get; set; }
 
         [JsonProperty(PropertyName = "marketId")]
         public string MarketId { get; set; }
