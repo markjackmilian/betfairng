@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using BetfairNG.Data;
 using Newtonsoft.Json;
 
 namespace BetfairNG
@@ -111,6 +112,9 @@ namespace BetfairNG
             var result = response.ContinueWith(c =>
                 {
                     var lastByte = DateTime.Now;
+                    if(typeof(T) == typeof(PlaceExecutionReport))
+                        File.WriteAllText($"responses{DateTime.Now.Millisecond}.txt",c.Result);
+                    
                     var jsonResponse = JsonConvert.Deserialize<JsonResponse<T>>(c.Result);
 
                     watch.Stop();
