@@ -112,8 +112,6 @@ namespace BetfairNG
             var result = response.ContinueWith(c =>
                 {
                     var lastByte = DateTime.Now;
-                    if(typeof(T) == typeof(PlaceExecutionReport))
-                        File.WriteAllText($"responses{DateTime.Now.Millisecond}.txt",c.Result);
                     
                     var jsonResponse = JsonConvert.Deserialize<JsonResponse<T>>(c.Result);
 
