@@ -135,6 +135,7 @@ namespace BetfairNG
             r.Response = response.Result;
             r.LastByte = lastByteStamp;
             r.RequestStart = requestStart;
+            r.Json = response.JsonRpc;
             return r;
         }
 

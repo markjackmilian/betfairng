@@ -570,6 +570,12 @@ namespace BetfairNG
         public long LatencyMS { get; set; }
         public bool HasError { get; set; }
         public BetfairServerException Error { get; set; }
+
+        /// <summary>
+        /// Raw json for debug
+        /// </summary>
+        public string Json { get; set; }
+        
     }
 
     public class BetfairServerException : System.Exception
