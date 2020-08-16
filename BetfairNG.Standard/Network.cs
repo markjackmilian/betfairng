@@ -121,13 +121,14 @@ namespace BetfairNG
                         FormatEndpoint(endpoint),
                         method);
 
-                    return ToResponse(jsonResponse, requestStart, lastByte, watch.ElapsedMilliseconds);
+                    return ToResponse(jsonResponse, requestStart, lastByte, watch.ElapsedMilliseconds, c.Result);
                 });
 
             return result;
         }
 
-        private BetfairServerResponse<T> ToResponse<T>(JsonResponse<T> response, DateTime requestStart, DateTime lastByteStamp, long latency)
+        private BetfairServerResponse<T> ToResponse<T>(JsonResponse<T> response, DateTime requestStart,
+            DateTime lastByteStamp, long latency, string rawResponse)
         {
             BetfairServerResponse<T> r = new BetfairServerResponse<T>();
             r.Error = BetfairServerException.ToClientException(response.Error);
@@ -135,7 +136,7 @@ namespace BetfairNG
             r.Response = response.Result;
             r.LastByte = lastByteStamp;
             r.RequestStart = requestStart;
-            r.Json = response.JsonRpc;
+            r.Json = rawResponse;
             return r;
         }
 
